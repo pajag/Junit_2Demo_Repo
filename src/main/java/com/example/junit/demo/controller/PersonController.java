@@ -32,6 +32,12 @@ public class PersonController {
 		return ResponseEntity.ok(personService.getByIdPerson(id));
 		
 }
+	@GetMapping("/get")
+	public ResponseEntity<?> getAllPersonCity(@RequestParam(value="city") String city) {
+		
+		return ResponseEntity.ok(personService.getByPersonCity(city));
+		
+}
 
 	@PostMapping("/save")
 	public ResponseEntity<?> savePerson(@RequestBody PersonDto Dto) {

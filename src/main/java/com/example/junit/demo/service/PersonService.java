@@ -30,6 +30,15 @@ public class PersonService {
 
 	}
 	
+	public Person getByPersonCity(String city) {
+		Optional<Person> find= personRepository.findByPersonCity(city);
+		if(find.isEmpty()) {
+			return null;
+		}
+		 return find.get();
+
+	}
+	
 	public Person savePerson(Person person) {
 		return personRepository.save(person);
 
