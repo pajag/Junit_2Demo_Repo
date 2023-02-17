@@ -32,7 +32,7 @@ public class PersonController {
 		return ResponseEntity.ok(personService.getByIdPerson(id));
 		
 }
-	@GetMapping("/get")
+	@GetMapping("/get/city")
 	public ResponseEntity<?> getAllPersonCity(@RequestParam(value="city") String city) {
 		
 		return ResponseEntity.ok(personService.getByPersonCity(city));
